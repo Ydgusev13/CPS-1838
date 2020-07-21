@@ -1,0 +1,39 @@
+.main-nav {
+
+
+    &__ul {
+        display: flex;	
+        list-style-type: none;
+        overflow: hidden;	
+        overflow-x: scroll;
+        padding-top: 12px;
+        padding-left: 16px;
+        padding-bottom: 12px;
+        background-color: #F8F8F8;
+
+        .main-nav__li {
+            white-space: nowrap;
+            
+            .main-nav__link {
+                padding: 7px 15px;
+                margin-right: 10px;
+                font-family: 'TTLakes-Regular';
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: #7E7E82;
+                border: 2px solid #F8F8F8;
+
+                &:focus {
+                    background-color: #FFFFFF;
+                    border: 2px solid #B8FFEC;
+                    border-radius: 6px;
+                    outline: none;
+                }
+            }
+
+        }
+    }
+
+
+}

@@ -1,14 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-<img src="./img/webpack.svg" alt="Webpack Logo" width="200px">
-<h3>Welcome to Webpack 4 starter </h3>
+
+    <header class="header">
+        <div class="header__menu">
+            <button class="header__btn-burger btn"><img src="img/icon_burger.svg" alt="Кнопка меню"></button>
+            <img class="header__logo" src="img/logo_main.svg" alt="Логотип">  
+            <img class="header__divider" src="img/icon_divider.svg" alt="Разделитель меню">  
+            <button class="header__btn-repair btn"><img src="img/icon_repair.svg" alt="Оставить заявку на ремонт"></button>
+            <button class="header__btn-checkstatus btn"><img src="img/icon_check-status.svg" alt="Узнать статус ремонта"></button>
+        </div>
+        <hr class="header__hr">
+        <h1 class="header__title">Услуги и сервисы</h1>
+    </header>
+
+    <nav class="main-nav">
+        <ul class="main-nav__ul">
+            <li class="main-nav__li"><a class="main-nav__link" href="#">Ремонтируемые устройства</a></li>
+            <li class="main-nav__li"><a class="main-nav__link" href="#">Дополнительные услуги</a></li>
+            <li class="main-nav__li"><a class="main-nav__link" href="#">Цены на услуги</a></li>
+            <li class="main-nav__li"><a class="main-nav__link" href="#">Адреса сервисных центров</a></li>
+            <li class="main-nav__li"><a class="main-nav__link" href="#">Специальные цены</a></li>
+            <li class="main-nav__li"><a class="main-nav__link" href="#">Отзывы</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <article>
+            <div class="about">
+                <p class="about__text-1">
+                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
+					Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                </p>
+                <p class="about__text-2 about__text-2--hidden">
+                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера 
+                </p>
+                <p class="about__text-3 about__text-3--hidden">
+                    что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по 
+				 	рекомендациям и, в свою очередь, советуют нас родным и близким.
+                </p>
+                <button class="about__read-next">Читать далее</button>
+                <img class="about__signboard" src="img/signboard.jpg" alt="">
+                <hr class="about__hr">
+            </div>
+        </article>
+
+        <section>
+            <div class="brands">
+                <h2 class="brands__header"></h2>
+                <div class="brands__slider-container">
+                    <div class="brands__swiper-container">
+                        <div class="brands__swiper-wrapper">
+                            <div class="brands__swiper-slide card">
+                                <div class="brands__card-container">
+                                    <img class="brands__image" src="" alt="" >
+                                    <img class="brands__icon-go" src="" alt="" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </section>
+
+    </main>
+
+    
 </body>
 </html>

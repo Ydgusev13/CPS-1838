@@ -1,0 +1,71 @@
+.about {
+
+    background-color: #F8F8F8;
+
+    &__text-1 {
+        padding-top: 20px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+        font-family: 'TTLakes-Regular';
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        color: #1B1C21;
+    }
+
+    &__text-2 {
+        padding-left: 16px;
+        padding-right: 16px;
+        font-family: 'TTLakes-Regular';
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        color: #1B1C21;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__text-3 {
+        padding-left: 16px;
+        padding-right: 16px;
+        font-family: 'TTLakes-Regular';
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        color: #1B1C21;
+
+        &--hidden {
+            display: none;
+        }
+
+    } 
+    
+    &__read-next {
+        font-family: 'TTLakes-Regular';
+        margin-left: 48px;
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #1B1C21;
+
+        &::before {
+            content: url("/src/img/icon_two-arrows.svg");
+            position: absolute;
+            margin-left: -22px;
+        }
+    }
+
+    &__signboard {
+        background-color: #F8F8F8;
+        width: 100%;
+        padding-bottom: 24px;
+    }
+
+    &__hr {
+        border: none;
+        color: #D9FFF5;
+        background-color: #D9FFF5;
+        height: 1px;
+    }
+}
