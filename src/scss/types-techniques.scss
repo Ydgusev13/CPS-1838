@@ -1,0 +1,78 @@
+.types-techniques {
+    margin-top: 140px;
+    background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+    &__hr {
+        border: none;
+        color: #D9FFF5;
+        background-color: #D9FFF5;
+        height: 1px;
+    }
+
+    &__header {
+        transform: inherit;
+        padding: 16px 0px 16px 16px;
+        font-family: 'TTLakes-Regular';
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        color: #7E7E82;
+        font-weight: normal;    
+    }
+
+    &__slider-container {
+        transform: inherit; 
+        background-color: #F8F8F8;
+        min-height: 196px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+
+        .types-techniques__swiper-container {
+            overflow: hidden;
+            width: 100%;
+
+            .types-techniques__swiper-wrapper {
+                display: flex;
+                width: 100%;
+                height: 100%;
+
+                .types-techniques__swiper-slide {
+                    flex-shrink: 0;   
+                    
+                    &:last-child {
+                        margin-right: 32px;
+                    }  
+                    
+                    .types-techniques__card-container {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        width: 240px;
+                        height: 160px;
+                        
+                        .types-techniques__card-text {
+                            margin-top: 16px;
+                            margin-left: 16px;
+                            font-family: 'TTLakes-Medium';
+                            font-size: 16px;
+                            line-height: 24px;
+                            letter-spacing: -0.2px;
+                            color: #1B1C21;
+                        }
+
+                        .types-techniques__icon-go {
+                            align-self: flex-end;
+                            margin-right: 16px;
+                            margin-bottom: 16px;
+                        }
+
+                    }
+                }
+            }
+        }               
+    }
+}

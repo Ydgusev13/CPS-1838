@@ -1,0 +1,69 @@
+.brands {
+    background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%); 
+    max-height: 79px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+    &__header {
+        font-family: 'TTLakes-Regular';
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        color: #7E7E82;
+        margin: 0px 16px 15px 16px;
+        padding-top: 16px;
+        font-weight: normal;
+        transform: inherit;
+     } 
+
+     &__slider-container {
+        transform: inherit; 
+        background-color: #F8F8F8;
+        min-height: 108px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+
+        .brands__swiper-container {
+            overflow: hidden;
+            width: 100%;
+
+            .brands__swiper-wrapper {
+                display: flex;
+                width: 100%;
+                height: 100%;
+
+                .brands__swiper-slide {
+                    flex-shrink: 0;
+
+                    &:last-child {
+                        margin-right: 32px;
+                    }
+
+                    .brands__card-container {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 238px;
+                        height: 70px;
+
+                        .brands__image {
+                            margin-left: 16px;
+                        }
+
+                        .brands__icon-go {
+                            margin-right: 16px;
+                          } 
+                    }
+                
+                .card {};
+
+                }
+            }
+        }
+          
+
+     }
+    
+}

@@ -1,0 +1,26 @@
+.footer {
+    background-color: #F8F8F8;
+
+    &__text {
+        font-family: 'TTLakes-Medium';
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #7E7E82;
+        mix-blend-mode: normal;
+        opacity: 0.72;
+
+        &:first-child {
+            padding-top: 16px;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            margin-top: 16px;
+        }
+
+        &:nth-child(3) {
+            padding-bottom: 19px;
+        }
+    }
+}
