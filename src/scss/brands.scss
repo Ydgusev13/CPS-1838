@@ -1,6 +1,5 @@
 .brands {
     background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%); 
-    max-height: 79px;
     transform: matrix(-1, 0, 0, 1, 0, 0);
 
     &__header {
@@ -14,9 +13,9 @@
         padding-top: 16px;
         font-weight: normal;
         transform: inherit;
-     } 
+    } 
 
-     &__slider-container {
+    &__slider-container {
         transform: inherit; 
         background-color: #F8F8F8;
         min-height: 108px;
@@ -56,14 +55,8 @@
                             margin-right: 16px;
                           } 
                     }
-                
-                .card {};
-
                 }
             }
-        }
-          
-
-     }
-    
+        }         
+    } 
 }
