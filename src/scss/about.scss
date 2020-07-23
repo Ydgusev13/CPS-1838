@@ -15,6 +15,7 @@
 
     &__text-2 {
         padding-left: 16px;
+        margin-bottom: 16px;
         padding-right: 16px;
         font-family: 'TTLakes-Regular';
         font-size: 14px;
@@ -24,20 +25,6 @@
         &--hidden {
             display: none;
         }
-    }
-
-    &__text-3 {
-        padding-left: 16px;
-        padding-right: 16px;
-        font-family: 'TTLakes-Regular';
-        font-size: 14px;
-        letter-spacing: 0.2px;
-        color: #1B1C21;
-
-        &--hidden {
-            display: none;
-        }
-
     } 
     
     &__read-next {
@@ -54,6 +41,22 @@
             position: absolute;
             margin-left: -22px;
         }
+    }
+
+    &__roll-up {
+        font-family: 'TTLakes-Regular';
+        margin-left: 48px;
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #1B1C21; 
+
+        &::before {
+            content: url("../img/icon_two_arrows-back.svg");
+            position: absolute;
+            margin-left: -22px;
+        }               
     }
 
     &__signboard {

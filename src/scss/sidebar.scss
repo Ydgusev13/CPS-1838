@@ -1,10 +1,19 @@
 .sidebar {
     background-color: #FFFFFF;
-    position: absolute;
+    position: fixed;
     width: 320px;
     top: 0px;
     left: -320px;
+    bottom: 0px;
+    right: 0px;
     z-index: 1990;
+    overflow-y: scroll;
+    transition: left 1s;
+
+    
+    @media only screen and (min-width: 768px) and (max-width: 1119px) {
+        height: 100vh;
+    }
 
     &__header {
         display: flex;
@@ -135,12 +144,10 @@
     }
 
     &--show {
-        transform: translate(320px);
-        transition-duration: 1s;       
+        left: 0px;     
     }
 
     &--hidden {
-        transform: translate(-320px);
-        transition-duration: 1s;   
+        left: -320px;
     }
 }
