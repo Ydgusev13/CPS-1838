@@ -74,6 +74,9 @@ a {
   text-decoration: none;
   color: inherit; }
 
+ul {
+  list-style-type: none; }
+
 @font-face {
   font-family: 'TTLakes-Regular';
   src: url(./fonts/TTLakes-Regular.ttf); }
@@ -107,7 +110,7 @@ a {
     font-size: 28px;
     line-height: 40px;
     letter-spacing: -0.6px;
-    padding: 24px 16px 12px 16px; }
+    padding: 24px 0px 12px 16px; }
     .header__title::before {
       content: url(./static/icon_highlight.svg);
       position: absolute;
@@ -192,7 +195,6 @@ a {
 
 .brands {
   background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
-  max-height: 79px;
   transform: matrix(-1, 0, 0, 1, 0, 0); }
   .brands__header {
     font-family: 'TTLakes-Regular';
@@ -241,7 +243,6 @@ a {
   border-radius: 5px; }
 
 .types-techniques {
-  margin-top: 140px;
   background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
   transform: matrix(-1, 0, 0, 1, 0, 0); }
   .types-techniques__hr {
@@ -408,6 +409,104 @@ a {
       margin-top: 16px; }
     .footer__text:nth-child(3) {
       padding-bottom: 19px; }
+
+.sidebar {
+  background-color: #FFFFFF;
+  position: absolute;
+  width: 320px;
+  top: 0px;
+  left: -320px;
+  z-index: 1990; }
+  .sidebar__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 22px; }
+    .sidebar__header .sidebar__btn-close {
+      margin-top: 24px;
+      margin-left: 16px; }
+    .sidebar__header .sidebar__logo {
+      margin-top: 19px;
+      margin-left: -70px; }
+    .sidebar__header .sidebar__btn-search {
+      margin-top: 24px;
+      margin-right: 16px; }
+  .sidebar__nav {
+    margin-bottom: 28px; }
+    .sidebar__nav .sidebar__ul {
+      margin-left: 16px; }
+      .sidebar__nav .sidebar__ul .sidebar__li {
+        margin-bottom: 14px; }
+        .sidebar__nav .sidebar__ul .sidebar__li .sidebar__link {
+          display: inline-block;
+          height: 32px;
+          font-family: 'TTLakes-Medium';
+          font-size: 16px;
+          line-height: 32px;
+          letter-spacing: -0.2px;
+          color: #1B1C21; }
+        .sidebar__nav .sidebar__ul .sidebar__li:first-child .sidebar__link {
+          color: #7E7E82; }
+          .sidebar__nav .sidebar__ul .sidebar__li:first-child .sidebar__link::before {
+            content: url(./static/icon_highlight.svg);
+            position: absolute;
+            margin-top: -3px;
+            margin-bottom: 10px;
+            margin-left: -16px; }
+  .sidebar__contact .sidebar__btns-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 16px; }
+    .sidebar__contact .sidebar__btns-contact .sidebar__btn-call {
+      margin-left: 16px; }
+    .sidebar__contact .sidebar__btns-contact .sidebar__btn-chat {
+      margin-left: 16px; }
+    .sidebar__contact .sidebar__btns-contact .sidebar__btn-profile {
+      margin-left: 16px; }
+  .sidebar__mail {
+    display: block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-family: 'TTLakes-Medium';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    margin-bottom: 12px;
+    margin-left: 16px; }
+  .sidebar__phone {
+    display: block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-family: 'TTLakes-Bold';
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    margin-bottom: 8px;
+    margin-left: 16px; }
+  .sidebar__change-lang {
+    margin-bottom: 32px;
+    margin-left: 16px; }
+    .sidebar__change-lang .btn {
+      font-family: 'TTLakes-Medium';
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #1B1C21; }
+      .sidebar__change-lang .btn:first-child {
+        color: #7E7E82; }
+      .sidebar__change-lang .btn:nth-child(2), .sidebar__change-lang .btn:nth-child(3) {
+        margin-left: 3px; }
+  .sidebar--show {
+    transform: translate(320px);
+    transition-duration: 1s; }
+  .sidebar--hidden {
+    transform: translate(-320px);
+    transition-duration: 1s; }
 
 
 /*# sourceMappingURL=style.css.map*/
