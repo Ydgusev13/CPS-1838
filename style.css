@@ -70,12 +70,18 @@ button {
   border: none;
   background-color: transparent; }
 
+button:active, button:focus {
+  outline: none; }
+
 a {
   text-decoration: none;
   color: inherit; }
 
 ul {
   list-style-type: none; }
+
+.overflow-hidden {
+  overflow: hidden; }
 
 @font-face {
   font-family: 'TTLakes-Regular';
@@ -155,21 +161,13 @@ ul {
     color: #1B1C21; }
   .about__text-2 {
     padding-left: 16px;
+    margin-bottom: 16px;
     padding-right: 16px;
     font-family: 'TTLakes-Regular';
     font-size: 14px;
     letter-spacing: 0.2px;
     color: #1B1C21; }
     .about__text-2--hidden {
-      display: none; }
-  .about__text-3 {
-    padding-left: 16px;
-    padding-right: 16px;
-    font-family: 'TTLakes-Regular';
-    font-size: 14px;
-    letter-spacing: 0.2px;
-    color: #1B1C21; }
-    .about__text-3--hidden {
       display: none; }
   .about__read-next {
     font-family: 'TTLakes-Regular';
@@ -181,6 +179,18 @@ ul {
     color: #1B1C21; }
     .about__read-next::before {
       content: url(./static/icon_two-arrows.svg);
+      position: absolute;
+      margin-left: -22px; }
+  .about__roll-up {
+    font-family: 'TTLakes-Regular';
+    margin-left: 48px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21; }
+    .about__roll-up::before {
+      content: url(./static/icon_two_arrows-back.svg);
       position: absolute;
       margin-left: -22px; }
   .about__signboard {
@@ -412,11 +422,18 @@ ul {
 
 .sidebar {
   background-color: #FFFFFF;
-  position: absolute;
+  position: fixed;
   width: 320px;
   top: 0px;
   left: -320px;
-  z-index: 1990; }
+  bottom: 0px;
+  right: 0px;
+  z-index: 1990;
+  overflow-y: scroll;
+  transition: left 1s; }
+  @media only screen and (min-width: 768px) and (max-width: 1119px) {
+    .sidebar {
+      height: 100vh; } }
   .sidebar__header {
     display: flex;
     flex-direction: row;
@@ -502,11 +519,24 @@ ul {
       .sidebar__change-lang .btn:nth-child(2), .sidebar__change-lang .btn:nth-child(3) {
         margin-left: 3px; }
   .sidebar--show {
-    transform: translate(320px);
-    transition-duration: 1s; }
+    left: 0px; }
   .sidebar--hidden {
-    transform: translate(-320px);
-    transition-duration: 1s; }
+    left: -320px; }
+
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.74);
+  z-index: 20;
+  transition: .3s all; }
+  .overlay--active {
+    opacity: 1;
+    visibility: visible; }
 
 
 /*# sourceMappingURL=style.css.map*/
