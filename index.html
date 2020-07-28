@@ -11,7 +11,17 @@
     <header class="header">
         <div class="header__menu">
             <button class="header__btn-burger btn"><img src="img/icon_burger.svg" alt="Кнопка меню"></button>
-            <img class="header__logo" src="img/logo_main.svg" alt="Логотип">  
+            <img class="header__divider-768-1440" src="img/icon_divider.svg" alt="Разделитель меню">
+            <img class="header__logo" src="img/logo_main.svg" alt="Логотип"> 
+            <button class="btn header__btn-call-768-1440">
+                <img src="img/icon_call.svg" alt="Позвонить">
+            </button>
+            <button class="btn header__btn-chat-768-1440">
+                <img src="img/icon_chat.svg" alt="Открыть чат">
+            </button>
+            <button class="btn header__btn-profile-768-1440">
+                <img src="img/icon_profile.svg" alt="Открыть профиль">
+            </button>       
             <img class="header__divider" src="img/icon_divider.svg" alt="Разделитель меню">  
             <button class="header__btn-repair btn"><img src="img/icon_repair.svg" alt="Оставить заявку на ремонт"></button>
             <button class="header__btn-checkstatus btn"><img src="img/icon_check-status.svg" alt="Узнать статус ремонта"></button>
@@ -94,24 +104,27 @@
         </aside>        
         <div class="overlay"></div>
         <article class="about">
-            <p class="about__text-1">
-                Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
-				Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-            </p>
-            <p class="about__text-2 about__text-2--hidden">
-                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
-                что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по 
-                рекомендациям и, в свою очередь, советуют нас родным и близким. 
-            </p>
-            <button class="about__read-next">Читать далее</button>
-            <img class="about__signboard" src="img/signboard.jpg" alt="">
-            <hr class="about__hr">
+            <div class="about__wrapper-column-left-768-1440">
+                <p class="about__text-1">
+                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
+				    Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                </p>
+                <p class="about__text-2 about__text-2--hidden">
+                    <span>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</span>
+                    что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по 
+                    рекомендациям и, в свою очередь, советуют нас родным и близким. 
+                </p>
+                <button class="about__read-next">Читать далее</button>
+            </div>
+            <div class="about__wrapper-column-right-768-1440">
+                <img class="about__signboard" src="img/signboard.jpg" alt="">
+            </div>
         </article>
-
+        <hr class="hr">
         <section class="brands">
                 <h2 class="brands__header">Ремонт техники различных брендов</h2>
                 <div class="brands__slider-container">
-                    <div class="brands__swiper-container">
+                    <div class="brands__swiper-container" data-mobile="false">
                         <div class="brands__swiper-wrapper">
 
                             <div class="brands__swiper-slide card">
@@ -172,6 +185,9 @@
                         </div>
                     </div>
                     <div class="brands__swiper-pagination"></div>
+                </div>
+                <div class="brands__read-next-wrapper">
+                    <button class="brands__read-next">Показать все</button>
                 </div>   
         </section>
 
@@ -179,7 +195,7 @@
                 <hr class="types-techniques__hr">
                 <h2 class="types-techniques__header">Ремонт различных видов техники</h2>
                 <div class="types-techniques__slider-container">
-                    <div class="types-techniques__swiper-container">
+                    <div class="types-techniques__swiper-container" data-mobile="false">
                         <div class="types-techniques__swiper-wrapper">
 
                             <div class="types-techniques__swiper-slide card">
@@ -246,9 +262,15 @@
         <section class="price">
             <hr class="price__hr">  
             <h2 class="price__header">Цены на услуги</h2>
+            <div class="price__header-swiper">
+                <h3 class="price__title">Ремонтные услуги</h3>
+                <h3 class="price__title">Цена</h3>
+                <h3 class="price__title">Срок</h3>
+                <div class="price__space"></div>
+            </div>
             <div class="price__slider-container">
                 <div class="price__swiper-container">
-                    <div class="price__swiper-wrapper">
+                    <div class="price__swiper-wrapper" data-mobile="false">
 
                         <div class="price__swiper-slide card">
                             <div class="price__card-container">
@@ -319,13 +341,30 @@
             </div>
             <hr class="price__hr">
         </section>
-        <footer class="footer">
-            <p class="footer__text">2019 CPS <br> Разработано командой Apesong</p>
-            <p class="footer__text">Политика конфиденциальности</p>
-            <p class="footer__text">Информация, размещенная на данной странице, не является публичной офертой</p>
-        </footer>
+        <section class="call-modal">
+            <div class="call-modal__wrapper">
+                <button class="btn call-modal__btn-close">
+                    <img src="img/close.svg" alt="Закрыть форму Заказать звонок">
+                </button>
+                <h4 class="call-modal__header">Заказать звонок</h4>
+                <form class="call-modal__form" action="" method="post">
+                    <input class="call-modal__input" type="tel" placeholder="Телефон">
+                </form>
+                <p class="call-modal__text">
+                    Нажимая &quot;отправить&quot;, Вы даете согласие на <a class="call-modal__link" href="#">обработку персональных данных</a> и 
+                    соглашаетесь с нашей <a class="call-modal__link" href="#">политикой конфиденциальности</a>
+                </p>
+                <button class="btn call-modal__btn-post-phone">
+                    <img src="img/btn_send.svg" alt="Отравить форму">
+                </button>    
+            </div>
+        </section>
     </main>
-
+    <footer class="footer">
+        <p class="footer__text">2019 CPS <br> Разработано командой Apesong</p>
+        <p class="footer__text">Политика конфиденциальности</p>
+        <p class="footer__text">Информация, размещенная на данной странице, не является публичной офертой</p>
+    </footer>
     
 <script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
