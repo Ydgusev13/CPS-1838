@@ -8,11 +8,12 @@
     right: 0px;
     z-index: 1990;
     overflow-y: scroll;
-    transition: left 1s;
+    transition: left 1s, box-shadow 1s;
 
     
     @media only screen and (min-width: 768px) and (max-width: 1119px) {
         height: 100vh;
+        //box-shadow: -20px 0 50px 50px #DBDDE5; 
     }
 
     &__header {
@@ -24,16 +25,30 @@
         .sidebar__btn-close {
             margin-top: 24px;
             margin-left: 16px;
+
+            @media only screen and (min-width: 768px) and (max-width: 1119px) {
+                margin-left: 24px;
+            }
         }
 
         .sidebar__logo {
             margin-top: 19px;
             margin-left: -70px;
+
+            
+            @media only screen and (min-width: 768px) and (max-width: 1119px) {
+                margin-left: -62px;
+            }
         }
 
         .sidebar__btn-search {
             margin-top: 24px;
             margin-right: 16px;
+
+            
+            @media only screen and (min-width: 768px) and (max-width: 1119px) {
+                margin-right: 24px;
+            }
         }
     }
 
@@ -42,6 +57,10 @@
 
         .sidebar__ul {
             margin-left: 16px;
+
+            @media only screen and (min-width: 768px) and (max-width: 1119px) {
+                margin-left: 24px;
+            }
 
             .sidebar__li {
                 margin-bottom: 14px;
@@ -66,7 +85,7 @@
                             position: absolute;
                             margin-top: -3px;
                             margin-bottom: 10px;
-                            margin-left: -16px;
+                            margin-left: -24px;
                         }
                     }
                 }
@@ -84,14 +103,26 @@
 
             .sidebar__btn-call {
                 margin-left: 16px;
+
+                @media only screen and (min-width: 768px) and (max-width: 1119px) {
+                    margin-left: 24px;
+                }
             }
 
             .sidebar__btn-chat {
                 margin-left: 16px;
+
+                @media only screen and (min-width: 768px) and (max-width: 1119px) {
+                    margin-left: 24px;
+                }
             }
 
             .sidebar__btn-profile {
                 margin-left: 16px;
+
+                @media only screen and (min-width: 768px) and (max-width: 1119px) {
+                    margin-left: 24px;
+                }
             }
 
         }
@@ -107,6 +138,10 @@
         color: #1B1C21;
         margin-bottom: 12px;        
         margin-left: 16px;
+
+        @media only screen and (min-width: 768px) and (max-width: 1119px) {
+            margin-left: 24px;
+        }
     }
 
     &__phone {
@@ -119,11 +154,19 @@
         color: #1B1C21;
         margin-bottom: 8px;        
         margin-left: 16px;
+
+        @media only screen and (min-width: 768px) and (max-width: 1119px) {
+            margin-left: 24px;
+        }
     }
 
     &__change-lang {
         margin-bottom: 32px;
         margin-left: 16px;
+
+        @media only screen and (min-width: 768px) and (max-width: 1119px) {
+            margin-left: 24px;
+        }
 
         .btn {
             font-family: 'TTLakes-Medium';
@@ -144,7 +187,12 @@
     }
 
     &--show {
-        left: 0px;     
+        left: 0px;
+
+        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+            box-shadow: -20px 0 50px 50px #DBDDE5; 
+        }
+             
     }
 
     &--hidden {

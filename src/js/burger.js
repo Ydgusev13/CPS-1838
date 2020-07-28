@@ -1,3 +1,5 @@
+import {callModal} from './call-modal.js'
+
 const burger = document.querySelector('.header__btn-burger');
 const sidebarBtnClose = document.querySelector('.sidebar__btn-close');
 const sidebar = document.querySelector('.sidebar');
@@ -18,5 +20,7 @@ sidebarBtnClose.addEventListener('click', function () {
 overlay.addEventListener('click', function () {
     sidebar.classList.remove('sidebar--show');
     overlay.classList.remove('overlay--active');
+    document.body.classList.remove('overflow-hidden');
+    callModal.classList.remove('call-modal--show');
 });
 

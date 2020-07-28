@@ -11,6 +11,10 @@
         padding-bottom: 12px;
         background-color: #F8F8F8;
 
+        @media only screen and (min-width: 768px) and (max-width: 1119px) {
+            padding-left: 24px;
+        }
+
         .main-nav__li {
             white-space: nowrap;
             
@@ -23,6 +27,11 @@
                 letter-spacing: -0.2px;
                 color: #7E7E82;
                 border: 2px solid #F8F8F8;
+
+                
+                @media only screen and (min-width: 768px) and (max-width: 1119px) {
+                    margin-right: 2px; 
+                }
 
                 &:focus {
                     background-color: #FFFFFF;

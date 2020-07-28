@@ -18,7 +18,52 @@
         letter-spacing: -0.2px;
         text-transform: uppercase;
         color: #7E7E82;
-        font-weight: normal;   
+        font-weight: normal;  
+        
+        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+            padding-left: 24px; 
+        }
+    }
+
+    &__header-swiper {
+        display: none;
+
+        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+            transform: inherit;
+            background: #F8F8F8;
+            padding-top: 31px;
+            padding-right: 24px;
+            padding-left: 40px;
+            justify-content: space-between;
+            width: 100%;
+
+            .price__title {
+                font-family: 'TTLakes-Regular';
+                font-size: 14px;
+                line-height: 16px;
+                color: #7E7E82;
+                mix-blend-mode: normal;
+                opacity: 0.72;
+
+                &:first-child {
+                    width: 49%;
+                }
+
+                &:nth-of-type(3) {
+                    width: 13%;
+                }
+            }
+
+            .price__space {
+                width: 119px;
+                height: 32px;
+            }
+        }
+
+        
     }
 
     &__slider-container {
@@ -29,6 +74,12 @@
         padding-bottom: 16px;
         padding-left: 8px;
 
+        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+            padding-left: 24px; 
+            padding-right: 24px;
+            padding-top: 0px;
+        }
+
         .price__swiper-container {
             overflow: hidden;
             width: 100%;  
@@ -37,12 +88,28 @@
                 display: flex;
                 width: 100%;
                 height: 100%;
+
+                @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                    flex-wrap: wrap;
+                }
                 
                 .price__swiper-slide {
                     flex-shrink: 0;
+                   
+                    @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                       width: 100%;     
+                    }                   
 
                     &:last-child {
                         margin-right: 32px;
+                    }
+
+                    &.card {
+
+                        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                            border: none;
+                            border-radius: 0px;     
+                        } 
                     }
 
                     .price__card-container {
@@ -53,7 +120,21 @@
                         width: 228px;
                         height: 168px;
                         padding: 16px;
-                                            
+
+                        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                            flex-direction: row;
+                            box-sizing: border-box;
+                            height: 64px;
+                            width: 100%;
+                            align-items: center;
+
+                            &::after {
+                                content: url("../img/hr-price.svg");
+                                position: absolute;
+                                margin-top: 53px;
+                            }
+                        }
+                                                                  
                         .price__title {
                             font-family: 'TTLakes-Regular';
                             font-size: 14px;
@@ -61,6 +142,10 @@
                             color: #7E7E82;
                             mix-blend-mode: normal;
                             opacity: 0.72;
+
+                            @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                                display: none;
+                            }
                             
                             &:nth-of-type(2),
                             &:nth-of-type(3) {
@@ -74,13 +159,38 @@
                             line-height: 18px;
                             letter-spacing: 0.2px;
                             color: #1B1C21;
-                            margin-top: 4px;
+                            margin-top: 4px;                           
+
+                            @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                                margin-top: 0px;
+                                
+                                &:first-of-type {
+                                    width: 51%;
+                                }
+                            }
                         }
 
                         .price__order {
                             align-self: flex-end;
                             position: absolute;
-                            top: 152px;                          
+                            top: 152px; 
+                            
+                            @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                                position: static;
+                                align-self: auto;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        
+                        &>.price__card-container {
+
+                            @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                                &::after {
+                                    content: "";
+                                }
+                            }
                         }
                     }
                 }
@@ -123,8 +233,15 @@
                 left: 130px;
                 top: 40px;
             }
+        }
+
     }
 
+    .price__swiper-pagination {
+
+        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+            display: none;
+        }
     }
 
 }

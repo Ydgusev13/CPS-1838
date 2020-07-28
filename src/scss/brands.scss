@@ -13,6 +13,10 @@
         padding-top: 16px;
         font-weight: normal;
         transform: inherit;
+
+        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+            padding-left: 8px;
+        }
     } 
 
     &__slider-container {
@@ -23,6 +27,11 @@
         padding-bottom: 16px;
         padding-left: 16px;
 
+        @media only screen and (min-width: 768px) and (max-width: 1119px) { 
+            padding-right: 24px;           
+            padding-left: 24px;            
+        }        
+
         .brands__swiper-container {
             overflow: hidden;
             width: 100%;
@@ -32,11 +41,30 @@
                 width: 100%;
                 height: 100%;
 
+                @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+
                 .brands__swiper-slide {
                     flex-shrink: 0;
 
+                    @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                        margin-bottom: 16px;
+
+                        &:nth-child(7),
+                        &:nth-child(8),
+                        &:nth-child(9) {
+                            display: none;
+                        }
+                    }               
+
                     &:last-child {
                         margin-right: 32px;
+
+                        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                            margin-right: 0px;
+                        }
                     }
 
                     .brands__card-container {
@@ -47,6 +75,11 @@
                         width: 238px;
                         height: 70px;
 
+                         @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                            width: 224px;
+                            height: 70px;
+                        }
+
                         .brands__image {
                             margin-left: 16px;
                         }
@@ -54,9 +87,65 @@
                         .brands__icon-go {
                             margin-right: 16px;
                           } 
-                    }
+                    } 
                 }
             }
-        }         
+        } 
+        
+        .brands__swiper-pagination {
+
+            @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                display: none;
+            }
+        }
     } 
+
+    &__read-next-wrapper {
+        display: none;
+        
+        @media only screen and (min-width: 768px) and (max-width: 1119px){
+            display: block;
+            transform: inherit;
+            background-color: #F8F8F8;
+        }       
+
+        .brands__read-next {
+
+            @media only screen and (min-width: 768px) and (max-width: 1119px) {                           
+                font-family: 'TTLakes-Regular';
+                margin-left: 56px;
+                margin-bottom: 16px;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: #1B1C21;
+
+                &::before {
+                    content: url("../img/icon_two-arrows.svg");
+                    position: absolute;
+                    margin-left: -22px;
+                }
+            }
+        }        
+    
+
+        .brands__roll-up {
+
+            @media only screen and (min-width: 768px) and (max-width: 1119px) {           
+                font-family: 'TTLakes-Regular';
+                margin-left: 56px;
+                margin-bottom: 16px;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: #1B1C21;
+
+                &::before {
+                    content: url("../img/icon_two_arrows-back.svg");
+                    position: absolute;
+                    margin-left: -22px;
+                }                         
+            }
+        }
+    }
 }
