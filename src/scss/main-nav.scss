@@ -1,5 +1,8 @@
 .main-nav {
 
+    @media (min-width: 1440px) {
+        
+    }
 
     &__ul {
         display: flex;	
@@ -11,12 +14,25 @@
         padding-bottom: 12px;
         background-color: #F8F8F8;
 
-        @media only screen and (min-width: 768px) and (max-width: 1119px) {
+        @media only screen and (min-width: 768px) and (max-width: 1439px) {
             padding-left: 24px;
+        }
+
+        @media (min-width: 1440px) {
+            overflow: hidden;
+            flex-wrap: wrap;
+            padding-left: 32px;
         }
 
         .main-nav__li {
             white-space: nowrap;
+
+            &:last-child {
+
+                @media (min-width: 1440px) {
+                    margin-top: 16px;
+                }
+            }
             
             .main-nav__link {
                 padding: 7px 15px;
@@ -29,7 +45,7 @@
                 border: 2px solid #F8F8F8;
 
                 
-                @media only screen and (min-width: 768px) and (max-width: 1119px) {
+                @media only screen and (min-width: 768px) and (max-width: 1439px) {
                     margin-right: 2px; 
                 }
 
@@ -39,10 +55,17 @@
                     border-radius: 6px;
                     outline: none;
                 }
-            }
 
+                &:hover {
+
+                    @media (min-width: 1440px) {
+                        background-color: #FFFFFF;
+                        border: 2px solid #B8FFEC;
+                        border-radius: 6px;
+                        outline: none;
+                    }  
+                }
+            }
         }
     }
-
-
 }

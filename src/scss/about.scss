@@ -1,15 +1,25 @@
 .about {
     background-color: #F8F8F8;
 
-    @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+    @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+        display: flex;
+        flex-direction: row;
+    }
+
+    @media (min-width: 1440px) {
         display: flex;
         flex-direction: row;
     }
 
 
+
     &__wrapper-column-left-768-1440 {
         
-        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+        @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+            width: 50%;
+        }
+
+        @media (min-width: 1440px) {
             width: 50%;
         }
 
@@ -23,9 +33,15 @@
             letter-spacing: 0.2px;
             color: #1B1C21;
 
-            @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
                 padding-right: 24px; 
-                padding-left: 24px;
+                padding-left: 24px;                
+            }
+
+            @media (min-width: 1440px) {
+                padding-right: 34px; 
+                padding-left: 34px;
+                line-height: 20px;
             }
         }
 
@@ -38,9 +54,15 @@
             letter-spacing: 0.2px;
             color: #1B1C21;
 
-            @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
                 padding-right: 24px; 
                 padding-left: 24px;
+            }
+
+            @media (min-width: 1440px) {
+                padding-right: 34px; 
+                padding-left: 34px;
+                line-height: 20px;
             }
 
             &--hidden {
@@ -57,7 +79,11 @@
             letter-spacing: -0.2px;
             color: #1B1C21;
 
-            @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+                margin-left: 56px;
+            }
+
+            @media (min-width: 1440px) {
                 margin-left: 56px;
             }
 
@@ -87,22 +113,34 @@
 
     &__wrapper-column-right-768-1440 {
 
-        @media only screen and (min-width: 768px) and (max-width: 1119px) {          
+        @media only screen and (min-width: 768px) and (max-width: 1439px) {          
             width: 50%;
             margin-right: 24px;
             padding-top: 20px;
-        }   
+        } 
+        
+        @media (min-width: 1440px) {
+            width: 50%;
+            margin-right: 24px;
+            padding-top: 20px;
+        }
 
         .about__signboard {
             background-color: #F8F8F8;
             width: 100%;
             padding-bottom: 24px;
 
-            @media only screen and (min-width: 768px) and (max-width: 1119px) {                           
+            @media only screen and (min-width: 768px) and (max-width: 1439px) {                           
                 margin-bottom: 24px;
                 padding-bottom: 0px;
                 border-radius: 10px;
             }  
+
+            @media (min-width: 1440px) {
+                margin-bottom: 24px;
+                padding-bottom: 0px;
+                border-radius: 10px;
+            }
         }
 
     }

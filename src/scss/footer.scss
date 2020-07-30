@@ -1,6 +1,13 @@
 .footer {
     background-color: #F8F8F8;
 
+    @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+        display: flex;
+        flex-direction: row;       
+        padding: 0px 24px;
+        padding-bottom: 24px;
+    }
+
     &__text {
         font-family: 'TTLakes-Medium';
         font-size: 14px;
@@ -10,17 +17,35 @@
         mix-blend-mode: normal;
         opacity: 0.72;
 
+        @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+            width: 33.33%;
+        }
+
         &:first-child {
             padding-top: 16px;
+
+            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+                padding: 0px;
+                text-align: left;
+            }
         }
 
         &:nth-child(2),
         &:nth-child(3) {
             margin-top: 16px;
+
+            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+                margin: 0px;
+            }
         }
 
         &:nth-child(3) {
             padding-bottom: 19px;
+
+            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+                padding: 0px;
+                text-align: right;
+            }
         }
     }
 }

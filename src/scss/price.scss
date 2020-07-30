@@ -1,6 +1,5 @@
 .price {
-    background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+    background: #F8F8F8;
 
     &__hr {
         border: none;
@@ -9,26 +8,35 @@
         height: 1px;        
     }
 
-    &__header {
-        transform: inherit;
-        padding: 16px 0px 16px 16px;
-        font-family: 'TTLakes-Regular';
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.2px;
-        text-transform: uppercase;
-        color: #7E7E82;
-        font-weight: normal;  
-        
-        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
-            padding-left: 24px; 
-        }
+    &__header-container {
+        background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
     }
+
+        .price__header {
+            transform: inherit;
+            padding: 16px 0px 16px 16px;
+            font-family: 'TTLakes-Regular';
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            text-transform: uppercase;
+            color: #7E7E82;
+            font-weight: normal;  
+            
+            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+                padding-left: 24px; 
+            }
+
+            @media (min-width: 1440px){
+               padding-left: 32px; 
+            }
+        }
 
     &__header-swiper {
         display: none;
 
-        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+        @media only screen and (min-width: 768px) and (max-width: 1439px) {            
             display: flex;
             flex-direction: row;
             box-sizing: border-box;
@@ -63,7 +71,40 @@
             }
         }
 
-        
+        @media (min-width: 1440px){
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+            transform: inherit;
+            background: #F8F8F8;
+            padding-top: 31px;
+            padding-right: 24px;
+            padding-left: 40px;
+            justify-content: space-between;
+            width: 100%;
+
+            .price__title {
+                font-family: 'TTLakes-Regular';
+                font-size: 14px;
+                line-height: 16px;
+                color: #7E7E82;
+                mix-blend-mode: normal;
+                opacity: 0.72;
+
+                &:first-child {
+                    width: 49%;
+                }
+
+                &:nth-of-type(3) {
+                    width: 13%;
+                }
+            }
+
+            .price__space {
+                width: 119px;
+                height: 32px;
+            }        
+        }       
     }
 
     &__slider-container {
@@ -74,10 +115,16 @@
         padding-bottom: 16px;
         padding-left: 8px;
 
-        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+        @media only screen and (min-width: 768px) and (max-width: 1439px) {            
             padding-left: 24px; 
             padding-right: 24px;
             padding-top: 0px;
+        }
+
+        @media (min-width: 1440px){
+            padding-left: 32px; 
+            padding-right: 32px;
+            padding-top: 0px; 
         }
 
         .price__swiper-container {
@@ -89,15 +136,23 @@
                 width: 100%;
                 height: 100%;
 
-                @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+                    flex-wrap: wrap;
+                }
+
+                @media (min-width: 1440px){
                     flex-wrap: wrap;
                 }
                 
                 .price__swiper-slide {
                     flex-shrink: 0;
                    
-                    @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                    @media only screen and (min-width: 768px) and (max-width: 1439px) {            
                        width: 100%;     
+                    }  
+                    
+                    @media (min-width: 1440px){
+                        width: 100%;  
                     }                   
 
                     &:last-child {
@@ -106,10 +161,15 @@
 
                     &.card {
 
-                        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                        @media only screen and (min-width: 768px) and (max-width: 1439px) {            
                             border: none;
                             border-radius: 0px;     
                         } 
+
+                        @media (min-width: 1440px){
+                            border: none;
+                            border-radius: 0px;  
+                        }   
                     }
 
                     .price__card-container {
@@ -121,7 +181,7 @@
                         height: 168px;
                         padding: 16px;
 
-                        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                        @media only screen and (min-width: 768px) and (max-width: 1439px) {            
                             flex-direction: row;
                             box-sizing: border-box;
                             height: 64px;
@@ -130,6 +190,20 @@
 
                             &::after {
                                 content: url("../img/hr-price.svg");
+                                position: absolute;
+                                margin-top: 53px;
+                            }
+                        }
+
+                        @media (min-width: 1440px) {            
+                            flex-direction: row;
+                            box-sizing: border-box;
+                            height: 64px;
+                            width: 100%;
+                            align-items: center;
+
+                            &::after {
+                                content: url("../img/Rectangle-1440.svg");
                                 position: absolute;
                                 margin-top: 53px;
                             }
@@ -143,7 +217,11 @@
                             mix-blend-mode: normal;
                             opacity: 0.72;
 
-                            @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+                                display: none;
+                            }
+
+                            @media (min-width: 1440px) {            
                                 display: none;
                             }
                             
@@ -161,7 +239,15 @@
                             color: #1B1C21;
                             margin-top: 4px;                           
 
-                            @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+                                margin-top: 0px;
+                                
+                                &:first-of-type {
+                                    width: 51%;
+                                }
+                            }
+
+                            @media (min-width: 1440px) {            
                                 margin-top: 0px;
                                 
                                 &:first-of-type {
@@ -175,7 +261,12 @@
                             position: absolute;
                             top: 152px; 
                             
-                            @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+                                position: static;
+                                align-self: auto;
+                            }
+
+                            @media (min-width: 1440px) {            
                                 position: static;
                                 align-self: auto;
                             }
@@ -186,7 +277,13 @@
                         
                         &>.price__card-container {
 
-                            @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+                            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+                                &::after {
+                                    content: "";
+                                }
+                            }
+
+                            @media (min-width: 1440px) {            
                                 &::after {
                                     content: "";
                                 }
@@ -208,6 +305,18 @@
         color: #1B1C21;
         padding-left: 16px;
         padding-right: 36px;
+
+        @media only screen and (min-width: 768px) and (max-width: 1439px) {
+            padding-left: 24px;
+            width: 421px;
+        }
+
+        @media (min-width: 1440px) {
+            padding-top: 16px;
+            padding-left: 32px;
+            width: 421px;
+        }
+
     }
 
     &__get-order-container {
@@ -216,6 +325,7 @@
         min-height: 95px;
         
         .price__get-order {
+            position: relative;
             font-family: 'TTLakes-Medium';
             font-size: 16px;
             line-height: 24px;
@@ -227,21 +337,39 @@
             margin-top: 10px;
             margin-left: 16px;
 
+            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+                margin-left: 24px;
+                width: 292px;                
+            }
+
+            @media (min-width: 1440px) {            
+                margin-left: 32px;
+                width: 292px;                
+            }
+
             &::after {
                 content: url("../img/Line.svg");
                 position: absolute;
-                left: 130px;
-                top: 40px;
+                left: 120px;
+                top: 30px;
+
+                @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+                    left: 300px;
+                    top: 17.5px;
+                }
+
+                @media (min-width: 1440px) {            
+                    left: 300px;
+                    top: 17.5px;
+                }
             }
         }
-
     }
 
     .price__swiper-pagination {
 
-        @media only screen and (min-width: 768px) and (max-width: 1119px) {            
+        @media only screen and (min-width: 768px) and (max-width: 1439px), (min-width: 1440px) {            
             display: none;
         }
     }
-
 }
