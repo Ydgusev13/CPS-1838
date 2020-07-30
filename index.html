@@ -7,7 +7,7 @@
     <title>Webpack 4 Starter</title>
 <link href="style.css" rel="stylesheet"></head>
 <body>
-
+    <div class="body__wrapper">
     <header class="header">
         <div class="header__menu">
             <button class="header__btn-burger btn"><img src="img/icon_burger.svg" alt="Кнопка меню"></button>
@@ -43,65 +43,8 @@
 
     <main>
 
-        <aside class="sidebar">
-            <div class="sidebar__header">
-                <button class="btn sidebar__btn-close">
-                    <img src="img/close.svg" alt="Закрыть">
-                </button>
-                <img class="sidebar__logo" src="img/logo_main.svg" alt="Логотип">
-                <button class="btn sidebar__btn-search">
-                    <img src="img/search.svg" alt="Поиск">
-                </button>
-            </div>
-            <div class="sidebar__nav">
-                <ul class="sidebar__ul">
-                    <li class="sidebar__li">
-                        <a class="sidebar__link" href="#">Ремонт техники</a>
-                    </li>
-                    <li class="sidebar__li">
-                        <a class="sidebar__link" href="#">Услуги и сервисы</a>
-                    </li>
-                    <li class="sidebar__li">
-                        <a class="sidebar__link" href="#">Корпоративным клиентам</a>
-                    </li>
-                    <li class="sidebar__li">
-                        <a class="sidebar__link" href="#">Продавцам техники</a>
-                    </li>
-                    <li class="sidebar__li">
-                        <a class="sidebar__link" href="#">Партнерам</a>
-                    </li>
-                    <li class="sidebar__li">
-                        <a class="sidebar__link" href="#">Производителям</a>
-                    </li>
-                    <li class="sidebar__li">
-                        <a class="sidebar__link" href="#">Наши сервисные центры</a>
-                    </li>
-                    <li class="sidebar__li">
-                        <a class="sidebar__link" href="#">Контакты</a>    
-                    </li>
-                </ul>
-            </div>
-            <div class="sidebar__contact">
-                <div class="sidebar__btns-contact">
-                    <button class="btn sidebar__btn-call">
-                        <img src="img/icon_call.svg" alt="Позвонить">
-                    </button>
-                    <button class="btn sidebar__btn-chat">
-                        <img src="img/icon_chat.svg" alt="Открыть чат">
-                    </button>
-                    <button class="btn sidebar__btn-profile">
-                        <img src="img/icon_profile.svg" alt="Открыть профиль">
-                    </button>                                
-                </div>
-                <a class="sidebar__mail" href="">mail@cps.com</a>
-                <a class="sidebar__phone" href="">8 800 890 8900</a>
-            </div>
-            <div class="sidebar__change-lang">
-                <button class="btn sidebar__btn-ru">RU</button>
-                <button class="btn sidebar__btn-en">EN</button>
-                <button class="btn sidebar__btn-ch">CH</button>              
-            </div>
-        </aside>        
+
+
         <div class="overlay"></div>
         <article class="about">
             <div class="about__wrapper-column-left-768-1440">
@@ -216,37 +159,37 @@
                                     <img class="types-techniques__icon-go" src="img/icon_go.svg" alt="Перейти">
                                 </div>
                             </div>
-                            <div class="types-techniques__swiper-slide card">
+                            <div class="types-techniques__swiper-slide card types-techniques__swiper-slide--hidden">
                                 <div class="types-techniques__card-container">
                                     <p class="types-techniques__card-text">Ремонт мониторов</p>
                                     <img class="types-techniques__icon-go" src="img/icon_go.svg" alt="Перейти">
                                 </div>
                             </div>
-                            <div class="types-techniques__swiper-slide card">
+                            <div class="types-techniques__swiper-slide card types-techniques__swiper-slide--hidden">
                                 <div class="types-techniques__card-container">
                                     <p class="types-techniques__card-text">Ремонт смартфонов</p>
                                     <img class="types-techniques__icon-go" src="img/icon_go.svg" alt="Перейти">
                                 </div>
                             </div>
-                            <div class="types-techniques__swiper-slide card">
+                            <div class="types-techniques__swiper-slide card types-techniques__swiper-slide--hidden">
                                 <div class="types-techniques__card-container">
                                     <p class="types-techniques__card-text">Ремонт принтеров</p>
                                     <img class="types-techniques__icon-go" src="img/icon_go.svg" alt="Перейти">
                                 </div>
                             </div>
-                            <div class="types-techniques__swiper-slide card">
+                            <div class="types-techniques__swiper-slide card types-techniques__swiper-slide--hidden">
                                 <div class="types-techniques__card-container">
                                     <p class="types-techniques__card-text">Ремонт наушников</p>
                                     <img class="types-techniques__icon-go" src="img/icon_go.svg" alt="Перейти">
                                 </div>
                             </div>
-                            <div class="types-techniques__swiper-slide card">
+                            <div class="types-techniques__swiper-slide card types-techniques__swiper-slide--hidden">
                                 <div class="types-techniques__card-container">
                                     <p class="types-techniques__card-text">Ремонт кондиционеров</p>
                                     <img class="types-techniques__icon-go" src="img/icon_go.svg" alt="Перейти">
                                 </div>
                             </div>
-                            <div class="types-techniques__swiper-slide card">
+                            <div class="types-techniques__swiper-slide card types-techniques__swiper-slide--hidden">
                                 <div class="types-techniques__card-container">
                                     <p class="types-techniques__card-text">Ремонт холодильников</p>
                                     <img class="types-techniques__icon-go" src="img/icon_go.svg" alt="Перейти">
@@ -256,12 +199,17 @@
                         </div>
                     </div>
                     <div class="types-techniques__swiper-pagination"></div>
+                </div>
+                <div class="types-techniques__read-next-wrapper">
+                    <button class="types-techniques__read-next">Показать все</button>
                 </div>                
         </section>
 
         <section class="price">
-            <hr class="price__hr">  
-            <h2 class="price__header">Цены на услуги</h2>
+            <hr class="price__hr"> 
+            <div class="price__header-container">
+                <h2 class="price__header">Цены на услуги</h2>
+            </div> 
             <div class="price__header-swiper">
                 <h3 class="price__title">Ремонтные услуги</h3>
                 <h3 class="price__title">Цена</h3>
@@ -360,11 +308,74 @@
             </div>
         </section>
     </main>
+    
     <footer class="footer">
         <p class="footer__text">2019 CPS <br> Разработано командой Apesong</p>
         <p class="footer__text">Политика конфиденциальности</p>
         <p class="footer__text">Информация, размещенная на данной странице, не является публичной офертой</p>
     </footer>
-    
+
+    </div>
+
+    <aside class="sidebar">
+        <div class="sidebar__header">
+            <button class="btn sidebar__btn-close">
+                <img src="img/close.svg" alt="Закрыть">
+            </button>
+            <img class="sidebar__logo" src="img/logo_main.svg" alt="Логотип">
+            <button class="btn sidebar__btn-search">
+                <img src="img/search.svg" alt="Поиск">
+            </button>
+        </div>
+        <div class="sidebar__nav">
+            <ul class="sidebar__ul">
+                <li class="sidebar__li">
+                    <a class="sidebar__link" href="#">Ремонт техники</a>
+                </li>
+                <li class="sidebar__li">
+                    <a class="sidebar__link" href="#">Услуги и сервисы</a>
+                </li>
+                <li class="sidebar__li">
+                    <a class="sidebar__link" href="#">Корпоративным клиентам</a>
+                </li>
+                <li class="sidebar__li">
+                    <a class="sidebar__link" href="#">Продавцам техники</a>
+                </li>
+                <li class="sidebar__li">
+                    <a class="sidebar__link" href="#">Партнерам</a>
+                </li>
+                <li class="sidebar__li">
+                    <a class="sidebar__link" href="#">Производителям</a>
+                </li>
+                <li class="sidebar__li">
+                    <a class="sidebar__link" href="#">Наши сервисные центры</a>
+                </li>
+                <li class="sidebar__li">
+                    <a class="sidebar__link" href="#">Контакты</a>    
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar__contact">
+            <div class="sidebar__btns-contact">
+                <button class="btn sidebar__btn-call">
+                    <img src="img/icon_call.svg" alt="Позвонить">
+                </button>
+                <button class="btn sidebar__btn-chat">
+                    <img src="img/icon_chat.svg" alt="Открыть чат">
+                </button>
+                <button class="btn sidebar__btn-profile">
+                    <img src="img/icon_profile.svg" alt="Открыть профиль">
+                </button>                                
+            </div>
+            <a class="sidebar__mail" href="">mail@cps.com</a>
+            <a class="sidebar__phone" href="">8 800 890 8900</a>
+        </div>
+        <div class="sidebar__change-lang">
+            <button class="btn sidebar__btn-ru">RU</button>
+            <button class="btn sidebar__btn-en">EN</button>
+            <button class="btn sidebar__btn-ch">CH</button>              
+        </div>
+    </aside> 
+
 <script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
