@@ -1,11 +1,15 @@
 .footer {
-    background-color: #F8F8F8;
+    background-color: $main-color;
 
-    @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+    @media only screen and (min-width: 768px) {            
         display: flex;
         flex-direction: row;       
         padding: 0px 24px;
         padding-bottom: 24px;
+    }
+
+    @media (min-width: 1440px) {
+        padding: 32px;         
     }
 
     &__text {
@@ -13,18 +17,18 @@
         font-size: 14px;
         line-height: 16px;
         text-align: center;
-        color: #7E7E82;
+        color: $grey-text-color;
         mix-blend-mode: normal;
         opacity: 0.72;
 
-        @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+        @media only screen and (min-width: 768px) {            
             width: 33.33%;
         }
 
         &:first-child {
             padding-top: 16px;
 
-            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+            @media only screen and (min-width: 768px) {            
                 padding: 0px;
                 text-align: left;
             }
@@ -34,15 +38,23 @@
         &:nth-child(3) {
             margin-top: 16px;
 
-            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+            @media only screen and (min-width: 768px) {            
                 margin: 0px;
             }
         }
 
+        &:nth-child(2) {
+
+            @media (min-width: 1440px) {
+                text-align: left;       
+            } 
+        }
+
+
         &:nth-child(3) {
             padding-bottom: 19px;
 
-            @media only screen and (min-width: 768px) and (max-width: 1439px) {            
+            @media only screen and (min-width: 768px) {            
                 padding: 0px;
                 text-align: right;
             }

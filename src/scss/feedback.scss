@@ -1,0 +1,102 @@
+.feedback {
+    position: fixed;
+    top: 0px;
+    right: -320px;
+    z-index: 5010;
+
+    background: #FFFFFF;
+    max-width: 320px;
+    height: 100vh;
+
+    transition: transform 1s, box-shadow 1s;
+    
+    @media (min-width: 1440px) {
+        min-width: 440px;
+        right: -504px;
+    }
+    
+    &__wrapper {
+        box-sizing: border-box;
+        padding: 24px 16px;
+
+        @media (min-width: 1440px) {
+            padding: 24px 32px;
+        }
+
+        .feedback__btn-close {
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.5s linear;
+
+            @media (min-width: 1440px){
+                position: absolute;
+                left: -64px;
+            }
+
+            &:hover {
+                transform: rotate(90deg);
+            }
+        }
+
+        .feedback__header {
+            font-family: 'TTLakes-Bold';
+            font-size: 24px;
+            line-height: 32px;
+            color: #1B1C21;
+
+            &::before {
+                content: url("../img/icon_highlight.svg");
+                position: absolute;
+                margin-top: -8px;
+                margin-left: -16px;
+
+                @media (min-width: 1440px) {
+                    margin-left: -32px;
+                }
+
+            }
+        }
+
+        .feedback__form {
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+
+        .feedback__text {
+            margin-bottom: 19px;
+            font-family: 'TTLakes-Medium';
+            font-size: 14px;
+            line-height: 16px;
+            color: #7E7E82;
+
+            .feedback__link {
+                color: #FF3E79;
+            }
+        }
+
+        .feedback__bth-submit {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 100%;
+            margin-bottom: 46px;
+            transition: transform 0.2s linear;
+
+            &:hover {
+                transform: scale(1.02);                
+            }
+        }
+    }
+
+    &--show {
+        transform: translateX(-320px);
+
+        @media only screen and (min-width: 768px) {            
+            box-shadow: 20px 0 50px 50px #DBDDE5; 
+        }
+
+        @media (min-width: 1440px) {
+            transform: translateX(-504px);
+        }
+    }
+}

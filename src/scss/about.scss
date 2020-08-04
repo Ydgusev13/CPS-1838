@@ -1,5 +1,5 @@
 .about {
-    background-color: #F8F8F8;
+    background-color: $main-color;
 
     @media only screen and (min-width: 768px) and (max-width: 1439px) {            
         display: flex;
@@ -31,7 +31,7 @@
             font-family: 'TTLakes-Regular';
             font-size: 14px;
             letter-spacing: 0.2px;
-            color: #1B1C21;
+            color: $main-text-color;
 
             @media only screen and (min-width: 768px) and (max-width: 1439px) {            
                 padding-right: 24px; 
@@ -52,7 +52,7 @@
             font-family: 'TTLakes-Regular';
             font-size: 14px;
             letter-spacing: 0.2px;
-            color: #1B1C21;
+            color: $main-text-color;
 
             @media only screen and (min-width: 768px) and (max-width: 1439px) {            
                 padding-right: 24px; 
@@ -77,7 +77,7 @@
             font-size: 16px;
             line-height: 24px;
             letter-spacing: -0.2px;
-            color: #1B1C21;
+            color: $main-text-color;
 
             @media only screen and (min-width: 768px) and (max-width: 1439px) {            
                 margin-left: 56px;
@@ -101,7 +101,7 @@
             font-size: 16px;
             line-height: 24px;
             letter-spacing: -0.2px;
-            color: #1B1C21; 
+            color: $main-text-color; 
 
             &::before {
                 content: url("../img/icon_two_arrows-back.svg");
@@ -126,7 +126,7 @@
         }
 
         .about__signboard {
-            background-color: #F8F8F8;
+            background-color: $main-color;
             width: 100%;
             padding-bottom: 24px;
 
@@ -142,6 +142,5 @@
                 border-radius: 10px;
             }
         }
-
     }
 }

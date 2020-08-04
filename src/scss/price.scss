@@ -269,6 +269,11 @@
                             @media (min-width: 1440px) {            
                                 position: static;
                                 align-self: auto;
+                                transition: transform 0.2s linear;
+                            }
+
+                            &:hover {
+                                transform: scale(1.02);
                             }
                         }
                     }

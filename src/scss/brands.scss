@@ -8,7 +8,7 @@
         line-height: 24px;
         letter-spacing: -0.2px;
         text-transform: uppercase;
-        color: #7E7E82;
+        color: $grey-text-color;
         margin: 0px 16px 15px 16px;
         padding-top: 16px;
         font-weight: normal;
@@ -25,7 +25,7 @@
 
     &__slider-container {
         transform: inherit; 
-        background-color: #F8F8F8;
+        background-color: $main-color;
         min-height: 108px;
         padding-top: 16px;
         padding-bottom: 16px;
@@ -141,13 +141,13 @@
         @media only screen and (min-width: 768px) and (max-width: 1439px){
             display: block;
             transform: inherit;
-            background-color: #F8F8F8;
+            background-color: $main-color;
         } 
         
         @media (min-width: 1440px) {
             display: block;
             transform: inherit;
-            background-color: #F8F8F8;
+            background-color: $main-color;
         }
 
         .brands__read-next {
@@ -159,7 +159,7 @@
                 font-size: 16px;
                 line-height: 24px;
                 letter-spacing: -0.2px;
-                color: #1B1C21;
+                color: $main-text-color;
 
                 &::before {
                     content: url("../img/icon_two-arrows.svg");
@@ -175,7 +175,7 @@
                 font-size: 16px;
                 line-height: 24px;
                 letter-spacing: -0.2px;
-                color: #1B1C21;
+                color: $main-text-color;
 
                 &::before {
                     content: url("../img/icon_two-arrows.svg");
@@ -195,7 +195,7 @@
                 font-size: 16px;
                 line-height: 24px;
                 letter-spacing: -0.2px;
-                color: #1B1C21;
+                color: $main-text-color;
 
                 &::before {
                     content: url("../img/icon_two_arrows-back.svg");
@@ -211,7 +211,7 @@
                 font-size: 16px;
                 line-height: 24px;
                 letter-spacing: -0.2px;
-                color: #1B1C21;
+                color: $main-text-color;
 
                 &::before {
                     content: url("../img/icon_two_arrows-back.svg");
