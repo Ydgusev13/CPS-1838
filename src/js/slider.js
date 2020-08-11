@@ -9,64 +9,53 @@ let typesTechniquesSwiper;
 let priceSwiper;
 
 function mobileSlider() {
-  if (window.innerWidth < 768 && brandsSlider.dataset.mobile == 'false') {
 
-    brandsSwiper = new Swiper (brandsSlider, {  
-      slideClass: 'brands__swiper-slide',
-      wrapperClass: 'brands__swiper-wrapper',
+  let createSwiper = function (swiperName, sliderName, slideClassName, wrapperClassName, paginationEl) {
+    swiperName = new Swiper (sliderName, {  
+      slideClass: slideClassName,
+      wrapperClass: wrapperClassName,
       slidesPerView: 'auto',     
       spaceBetween: 16,
       pagination: {
-        el: '.brands__swiper-pagination',
+        el: paginationEl,
         type: 'bullets',
       }
     });
+  };
+
+  let setDataSet = function (sliderName, value) {
+    sliderName.dataset.mobile = value;
+  };
+
+  if (window.innerWidth < 768 && brandsSlider.dataset.mobile == 'false') {
     
-    typesTechniquesSwiper = new Swiper (typesTechniquesSlider, {         
-      slideClass: 'types-techniques__swiper-slide',
-      wrapperClass: 'types-techniques__swiper-wrapper',
-      slidesPerView: 'auto',     
-      spaceBetween: 16,
-      pagination: {
-        el: '.types-techniques__swiper-pagination',
-        type: 'bullets', 
-      }       
-    }); 
+    createSwiper(brandsSwiper, brandsSlider, 'brands__swiper-slide', 'brands__swiper-wrapper', '.brands__swiper-pagination');
+    createSwiper(typesTechniquesSwiper, typesTechniquesSlider, 'types-techniques__swiper-slide', 'types-techniques__swiper-wrapper', '.types-techniques__swiper-pagination');
+    createSwiper(priceSwiper, priceSlider, 'price__swiper-slide', 'price__swiper-wrapper', '.price__swiper-pagination');
+    
+    setDataSet(brandsSlider, 'true');
+    setDataSet(typesTechniquesSlider, 'true');
+    setDataSet(priceSlider, 'true');
+  };
 
-    priceSwiper = new Swiper (priceSlider, { 
-      slideClass: 'price__swiper-slide',
-      wrapperClass: 'price__swiper-wrapper',
-      slidesPerView: 'auto',     
-      spaceBetween: 16,
-      pagination: {
-        el: '.price__swiper-pagination',
-        type: 'bullets',
-        }
-    });
+  if (window.innerWidth >= 768 && brandsSwiper) {
 
-    brandsSlider.dataset.mobile = 'true';
-    typesTechniquesSlider.dataset.mobile = 'true';
-    priceSlider.dataset.mobile = 'true';
-  }
+    let destroySwiper = function (sliderName, swiperName) {
+      if (sliderName.classList.contains('swiper-container-initialized')) {
+        swiperName.destroy();
+      };
+    };
 
-  if (window.innerWidth >= 768) {
-    brandsSlider.dataset.mobile = 'false';
-    typesTechniquesSlider.dataset.mobile = 'false';
-    priceSlider.dataset.mobile = 'false';
+    setDataSet(brandsSlider, 'false');
+    setDataSet(typesTechniquesSlider, 'false');
+    setDataSet(priceSlider, 'false');
 
-    if (brandsSlider.classList.contains('swiper-container-initialized')) {
-      brandsSwiper.destroy();
-    }
+    destroySwiper(brandsSlider, brandsSwiper); 
+    destroySwiper(typesTechniquesSlider, typesTechniquesSwiper); 
+    destroySwiper(priceSlider, priceSwiper); 
 
-    if (typesTechniquesSlider.classList.contains('swiper-container-initialized')) {
-      typesTechniquesSwiper.destroy();
-    }
-
-    if (priceSlider.classList.contains('swiper-container-initialized')) {
-      priceSwiper.destroy();
-    }
-  }
-}
+  };
+};
 
 mobileSlider();
 
